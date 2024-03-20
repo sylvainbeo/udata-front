@@ -405,7 +405,7 @@ msgstr "accueil"
 
 #: udata_front/theme/gouvfr/templates/home.html:18
 msgid "Open platform for French public data"
-msgstr "Plateforme ouverte des données publiques françaises"
+msgstr "Plateforme ouverte des données publiques"
 
 #: udata_front/theme/gouvfr/templates/home.html:55
 msgid "All featured topics"
