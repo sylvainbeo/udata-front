@@ -3,7 +3,7 @@
 {% set banner_activated = config['BANNER_ACTIVATED'] %}
 {% set read_only_mode = config['READ_ONLY_MODE'] %}
 {% set next_url = url_for(request.endpoint, **request.view_args) if not request.routing_exception else url_for('site.home') %}
-{% set image = meta.image or theme_static('img/logo-setec.png', external=True) %}
+{% set image = theme_static('img/logo-setec.png', external=True) %}
 
 <header role="banner" class="fr-header">
     {% if read_only_mode %}
