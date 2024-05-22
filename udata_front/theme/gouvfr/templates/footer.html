@@ -1,3 +1,4 @@
+{% set image = theme_static('img/logo-setec.png', external=True) %}
 <footer role="contentinfo">
     {% include theme("newsletter.html") %}
     <div class="fr-footer" id="footer">
@@ -77,15 +78,19 @@
             <div class="fr-footer__body">
             {% cache cache_duration, 'footer-brand-and-links', g.lang_code|default(config.DEFAULT_LANGUAGE)|string %}
                 <div class="fr-footer__brand fr-enlarge-link">
-                    <p class="fr-logo" title="république française">
+                    <div class="fr-header__logo">
+                        <img src="{{ image }}" alt="setec" />
+                    </div>
+
+                    <!-- <p class="fr-logo" title="république française">
                         république
                         <br>française
                     </p>
                     <a class="fr-footer__brand-link" href="/" title="{{_('Go back to website home - data.gouv.fr - République Française')}}">
                         {% include theme('svg/logotype.svg') %}
-                    </a>
+                    </a> -->
                 </div>
-                <div class="fr-footer__content">
+                <!-- <div class="fr-footer__content">
                     <p class="fr-footer__content-desc">{{ _("A product of the Direction Interministérielle du Numérique (DINUM).") }}</p>
                     <ul class="fr-footer__content-list">
                         {% for item in nav.gouvfr_network %}
@@ -94,7 +99,7 @@
                         </li>
                         {% endfor %}
                     </ul>
-                </div>
+                </div> -->
                 {% endcache %}
                 <div class="fr-col-auto fr-ml-auto self-end">
                     <nav role="navigation" class="fr-translate fr-nav">

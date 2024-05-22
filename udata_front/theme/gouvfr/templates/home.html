@@ -34,7 +34,16 @@
                                 class="btn-venti fr-my-2w bg-green-400"
                             >
                                 Données relatives à
-                                <strong>l'Agriculture et à l'Alimentation</strong>
+                                <strong>l'Environnement</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="{{ url_for('gouvfr.show_page', slug='donnees-energie') }}"
+                                class="btn-venti fr-my-2w bg-orange-100"
+                            >
+                                Données relatives aux
+                                <strong>Villes et Territoires</strong>
                             </a>
                         </li>
                         <li>
@@ -42,8 +51,8 @@
                                 href="{{ url_for('gouvfr.show_page', slug='donnees_education') }}"
                                 class="btn-venti fr-my-2w bg-blue-400"
                             >
-                                Données relatives à
-                                <strong>l'Éducation</strong>
+                                Données relatives aux
+                                <strong>Routes et Autoroutes</strong>
                             </a>
                         </li>
                     </ul>
@@ -92,7 +101,7 @@
 <section class="metrics-bar">
     <div class="fr-container fr-py-md-7w fr-py-2w">
         <div class="bar fr-p-9v">
-            <h3>{% include theme('svg/logotype.svg') %} {{ _('is') }}</h3>
+            <h3>Geo.data.setec {{ _('is') }}</h3>
             <div class="fr-grid-row justify-between fr-mt-md-9v fr-mt-2w">
                 {% for (label, metric) in metrics %}
                 <div class="filet fr-my-1v fr-my-md-0">
@@ -175,7 +184,7 @@
     ('latest-reuses', _('Latest reuses'), recent_reuses[:nb_reuses], {'sort': '-created'}),
 ) %}
 
-{# Reuse section #}
+<!-- {# Reuse section #}
 <section class="reuse fr-py-3w fr-py-md-7w">
     <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--gutters justify-between">
@@ -226,6 +235,6 @@
         {% endfor %}
     </div>
 </section>
-{# End reuse section #}
+{# End reuse section #} -->
 {% endcache %}
 {% endblock %}
