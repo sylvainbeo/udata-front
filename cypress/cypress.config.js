@@ -15,7 +15,7 @@ module.exports = defineConfig({
         return config;
       });
     },
-    baseUrl: "http://localhost:7000",
+    baseUrl: "http://localhost:7010",
     numTestsKeptInMemory: 10,
     viewportWidth: 1920,
     viewportHeight: 877,
