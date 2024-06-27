@@ -3,6 +3,7 @@
 {% set banner_activated = config['BANNER_ACTIVATED'] %}
 {% set read_only_mode = config['READ_ONLY_MODE'] %}
 {% set next_url = url_for(request.endpoint, **request.view_args) if not request.routing_exception else url_for('site.home') %}
+{% set image = theme_static('img/logo-setec-organ.png', external=True) %}
 
 <header role="banner" class="fr-header">
     {% if read_only_mode %}
@@ -28,10 +29,7 @@
                 <div class="fr-header__brand fr-enlarge-link">
                     <div class="fr-header__brand-top">
                         <div class="fr-header__logo">
-                            <p class="fr-logo">
-                                République
-                                <br>Française
-                            </p>
+                            <img src="{{ image }}" alt="setec orga" />
                         </div>
                         <div class="fr-header__navbar">
                             <button
